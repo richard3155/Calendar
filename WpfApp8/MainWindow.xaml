@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfApp8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp8"
+        mc:Ignorable="d"
+ 
+Title="Календарь задач" Height="300" Width="300">
+    <StackPanel>
+        <Calendar Name="calendar" SelectedDatesChanged="calendar_SelectedDatesChanged"/>
+        <StackPanel Visibility="Collapsed" Name="taskInputPanel">
+            <TextBlock Text="Описание задачи:" Margin="0,0,0,5"/>
+            <TextBox x:Name="taskDescriptionTextBox" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Margin="0,0,0,10"/>
+            <Button Content="OK" Click="OkButton_Click" />
+            <Button Content="Отмена" Click="CancelButton_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
